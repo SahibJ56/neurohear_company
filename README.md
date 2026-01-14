@@ -1,20 +1,34 @@
-<<<<<<< HEAD
-# React + Vite
+# NeuroHear 🧠👂 (Hackathon Winner)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [Click Here to Try NeuroHear](https://neurohear-company.vercel.app/)
 
-Currently, two official plugins are available:
+## Overview
+NeuroHear is a React-based cognitive auditory training application designed to assist in aural rehabilitation. It won [$1.5K] at [Hack the World].
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application challenges users to process speech in progressively difficult "speech-in-noise" environments, simulating real-world conditions like busy cafes or quiet rooms.
 
-## React Compiler
+## Key Technical Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Web Audio API Integration 🔊
+- Implemented a custom noise generation engine using the native browser `AudioContext`.
+- Dynamically generates brown/white noise buffers to simulate environmental interference without external audio files.
+- **Why:** Reduces load times and provides infinite, non-looping background noise for clinical accuracy.
 
-## Expanding the ESLint configuration
+### 2. Speech Synthesis & Recognition 🗣️
+- Utilizes the `SpeechSynthesisUtterance` interface to generate dynamic test sentences.
+- Features a custom "faint speech" algorithm that modulates gain nodes to test volume sensitivity threshold.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# neuro_hear
->>>>>>> 5c4c54d6e029835a5adb7fff3c32b6824d08d4c6
+### 3. Dynamic State Management ⚛️
+- Complex React `useEffect` hooks manage the game loop (Intro -> Screener -> Training -> Results).
+- Real-time scoring and difficulty adjustment logic based on user performance.
+
+## Tech Stack
+- **Frontend:** React.js (Vite)
+- **Styling:** Tailwind CSS (Custom Design System)
+- **Audio:** Web Audio API
+- **Icons:** Lucide React
+
+## How to Run Locally
+1. Clone the repo: `git clone https://github.com/SahibJ56/neurohear.git`
+2. Install dependencies: `npm install`
+3. Run dev server: `npm run dev`
